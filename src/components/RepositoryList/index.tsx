@@ -35,13 +35,10 @@ class RepositoryList extends Component<Props> {
   }
 }
 
-
 const mapStateToProps = (state: ApplicationState) => ({
   repositories: state.repositories.data,
 });
 
-const mapDispatchToProps = (dispatch: Dispatch) => {
-  bindActionCreators(RepositoriesActions, dispatch);
-};
+const mapDispatchToProps = (dispatch: Dispatch) => bindActionCreators(RepositoriesActions, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(RepositoryList);
